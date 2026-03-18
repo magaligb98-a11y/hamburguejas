@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">               
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Hamburguejas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="fondo-body"> 
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a onclick="mostrarSeccion('hamburguesas')">Hamburguesas</a></li>
+            <li><a onclick="mostrarSeccion('tartas')">Tartas</a></li>
+            <li><a onclick="mostrarSeccion('tortilla')">Tortilla</a></li>
+            <li><a onclick="mostrarSeccion('pedidos')">Pedidos</a></li>
+            <li><a onclick="mostrarSeccion('contacto')">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <h1 class="titulo">LAS HAMBURGUEJAS</h1>
+
+    <!-- PÁRRAFOS DE PRESENTACIÓN -->
+    <p class="parrafo">Comida saludable, casera y lista en minutos.</p>
+    <p class="parrafo">¿Te gustaría comer rico, casero y saludable sin pasar horas en la cocina?</p>
+    <p class="parrafo">Nosotros lo hacemos por vos.</p>
+    <p class="parrafo">Elaboramos comida casera y saludable congelada, pensada para que siempre tengas en tu freezer una opción práctica, nutritiva y deliciosa.</p>
+    <p class="parrafo">Solo tenés que sacar del freezer, calentar y disfrutar. Así de simple.</p>
+
+    <!-- SUBTÍTULO -->
+    <!-- FRANJA DESTACADA -->
+    <div class="franja">
+        <p class="franja-texto">🌿 Todo hecho con amor, directo a tu mesa 🌿</p>
+        <p class="franja-sub">Saludable · Casero · Práctico</p>
+    </div>
+
+    <!-- SUBTÍTULO -->
+    <h2 class="subtitulo" id="productos">Nuestros Productos</h2>
+
+    <!-- IMÁGENES -->
+    <div class="contenedor-imagenes">
+        <div class="producto">
+            <img class="imagen" src="HAMBURGUESA.jpeg" alt="Hamburguesa">
+            <p class="nombre-producto">Hamburguesas</p>
+        </div>
+        <div class="producto">
+            <img class="imagen" src="TARTA DE ZAPALLITOS.jpeg" alt="Tarta de zapallito">
+            <p class="nombre-producto">Tarta de Zapallito</p>
+        </div>
+        <div class="producto">
+            <img class="imagen" src="TARTA DE VERDURAS Y CABALLA.jpeg" alt="Tarta de caballa">
+            <p class="nombre-producto">Tarta de Caballa</p>
+        </div>
+        <div class="producto">
+            <img class="imagen" src="TARTA DE ANQUITO.jpeg" alt="Tarta de anquito">
+            <p class="nombre-producto">Tarta de Anquito</p>
+        </div>
+    </div>
+
+    <!-- PÁRRAFO FINAL INICIO -->
+    <p class="parrafo">📦 Directo a tu freezer.</p>
+    <p class="parrafo">🔥 Listo en pocos minutos.</p>
+
+    <!-- SECCIÓN HAMBURGUESAS -->
+    <section id="hamburguesas" class="seccion">
+        <h2 class="subtitulo">🍔 Hamburguesas</h2>
+        <p class="parrafo">Caseras, saludables y super sabrosas.</p>
+        <div class="tabla-productos">
+            <div class="producto-detalle">
+                <h3 class="nombre-detalle">De Lentejas</h3>
+                <p class="ingredientes">Lentejas, zanahoria y cebolla.</p>
+                <p class="precio">Pack de 5 — $4.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TARTAS -->
+    <section id="tartas" class="seccion">
+        <h2 class="subtitulo">🥧 Tartas</h2>
+        <p class="parrafo">Masa integral casera, rellenos frescos y horneadas al momento.</p>
+        <div class="tabla-productos">
+            <div class="producto-detalle">
+                <h3 class="nombre-detalle">Tarta de Zapallito</h3>
+                <p class="ingredientes">Zapallito verde, huevo y cebolla.</p>
+                <p class="precio">$4.500</p>
+            </div>
+            <div class="producto-detalle">
+                <h3 class="nombre-detalle">Tarta de Anquito</h3>
+                <p class="ingredientes">Anquito asado, huevo y cebolla.</p>
+                <p class="precio">$4.500</p>
+            </div>
+            <div class="producto-detalle">
+                <h3 class="nombre-detalle">Tarta de Caballa</h3>
+                <p class="ingredientes">Caballa al natural, cebolla y zanahoria.</p>
+                <p class="precio">$5.500</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TORTILLA -->
+    <section id="tortilla" class="seccion">
+        <h2 class="subtitulo">🥚 Tortilla de Papa</h2>
+        <p class="parrafo">Jugosa por dentro y doradita por fuera, como en casa.</p>
+        <div class="tabla-productos">
+            <div class="producto-detalle">
+                <h3 class="nombre-detalle">Clásica</h3>
+                <p class="ingredientes">Papa, huevo y cebolla. Simple y deliciosa.</p>
+                <p class="precio">$3.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PEDIDOS -->
+    <section id="pedidos" class="seccion">
+        <h2 class="subtitulo">🛒 Hacer un Pedido</h2>
+        <p class="parrafo">Elegí tus productos y te mandamos el pedido por WhatsApp.</p>
+
+        <div class="formulario">
+
+            <h3 class="form-titulo">🍔 Hamburguesas</h3>
+            <div class="fila-producto">
+                <span class="form-nombre">De Lentejas — $5.000</span>
+                <div class="contador">
+                    <button onclick="cambiar('lentejas', -1)">−</button>
+                    <span id="lentejas">0</span>
+                    <button onclick="cambiar('lentejas', 1)">+</button>
+                </div>
+            </div>
+
+            <h3 class="form-titulo">🥧 Tartas</h3>
+            <div class="fila-producto">
+                <span class="form-nombre">Tarta de Zapallito — $4.500</span>
+                <div class="contador">
+                    <button onclick="cambiar('zapallito', -1)">−</button>
+                    <span id="zapallito">0</span>
+                    <button onclick="cambiar('zapallito', 1)">+</button>
+                </div>
+            </div>
+            <div class="fila-producto">
+                <span class="form-nombre">Tarta de Anquito — $4.500</span>
+                <div class="contador">
+                    <button onclick="cambiar('anquito', -1)">−</button>
+                    <span id="anquito">0</span>
+                    <button onclick="cambiar('anquito', 1)">+</button>
+                </div>
+            </div>
+            <div class="fila-producto">
+                <span class="form-nombre">Tarta de Caballa — $5.500</span>
+                <div class="contador">
+                    <button onclick="cambiar('caballa', -1)">−</button>
+                    <span id="caballa">0</span>
+                    <button onclick="cambiar('caballa', 1)">+</button>
+                </div>
+            </div>
+
+            <h3 class="form-titulo">🥚 Tortilla</h3>
+            <div class="fila-producto">
+                <span class="form-nombre">Tortilla Clásica — $3.000</span>
+                <div class="contador">
+                    <button onclick="cambiar('tortilla-clasica', -1)">−</button>
+                    <span id="tortilla-clasica">0</span>
+                    <button onclick="cambiar('tortilla-clasica', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="total-box">
+                <span class="total-texto">Total: </span>
+                <span class="total-numero" id="total">$0</span>
+            </div>
+
+            <button class="btn-whatsapp" onclick="enviarPedido()">
+                📱 Enviar pedido por WhatsApp
+            </button>
+
+            <!-- Mensaje de gracias, oculto hasta que se envía -->
+            <div class="gracias" id="gracias">
+                ✅ ¡Gracias por tu pedido! En breve te contactamos por WhatsApp !
+            </div>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <p class="footer-titulo">LAS HAMBURGUEJAS</p>
+        <p class="footer-info">📍 Villa María, Córdoba, Argentina</p>
+        <p class="footer-info">📱 WhatsApp: 3535667953</p>
+        <p class="footer-info">📸 Instagram: @lashamburguejas</p>
+        <a class="btn-instagram" href="https://www.instagram.com/lashamburguejas?igsh=bzVndTBqendrY2p4" target="_blank">
+            📸 Seguinos en Instagram
+        </a>
+    </footer>
+
+    <!-- BOTÓN SUBIR -->
+    <button class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">▲</button>
+
+    <script>
+
+        var precios = {
+            'lentejas': 5000,
+            'zapallito': 4500,
+            'anquito': 4500,
+            'caballa': 5500,
+            'tortilla-clasica': 3000
+        };
+
+        var nombres = {
+            'lentejas': 'Hamburguesa de Lentejas',
+            'zapallito': 'Tarta de Zapallito',
+            'anquito': 'Tarta de Anquito',
+            'caballa': 'Tarta de Caballa',
+            'tortilla-clasica': 'Tortilla Clásica'
+        };
+
+        function mostrarSeccion(id) {
+            var secciones = document.querySelectorAll('.seccion');
+            for (var i = 0; i < secciones.length; i++) {
+                secciones[i].classList.remove('activa');
+            }
+            document.getElementById(id).classList.add('activa');
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        }
+
+        function cambiar(id, cantidad) {
+            var elemento = document.getElementById(id);
+            var valor = parseInt(elemento.innerText) + cantidad;
+            if (valor < 0) valor = 0;
+            elemento.innerText = valor;
+            actualizarTotal();
+        }
+
+        function actualizarTotal() {
+            var total = 0;
+            for (var id in precios) {
+                var cantidad = parseInt(document.getElementById(id).innerText);
+                total += cantidad * precios[id];
+            }
+            document.getElementById('total').innerText = '$' + total.toLocaleString('es-AR');
+        }
+
+        function enviarPedido() {
+            var mensaje = 'Hola! Quiero hacer un pedido:%0A%0A';
+            var total = 0;
+            var hayProductos = false;
+
+            for (var id in precios) {
+                var cantidad = parseInt(document.getElementById(id).innerText);
+                if (cantidad > 0) {
+                    mensaje += cantidad + 'x ' + nombres[id] + '%0A';
+                    total += cantidad * precios[id];
+                    hayProductos = true;
+                }
+            }
+
+            if (!hayProductos) {
+                alert('¡Agregá al menos un producto antes de enviar!');
+                return;
+            }
+
+            mensaje += '%0ATotal: $' + total.toLocaleString('es-AR');
+            document.getElementById('gracias').style.display = 'block';
+            window.open('https://wa.me/5493535667953?text=' + mensaje);
+        }
+
+       // Hace que los párrafos aparezcan al hacer scroll
+        var parrafos = document.querySelectorAll('.parrafo');
+        
+        var observador = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        parrafos.forEach(function(parrafo) {
+            observador.observe(parrafo);
+        }); 
+
+    </script>
+
+</body>
+</html>
